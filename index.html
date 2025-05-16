@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Portfolio</a>
+            <div class="hamburger" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+                <!-- <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i> Theme
+                </button> -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1 id="typed-text"></h1>
+        <p>Showcasing my latest work and projects for clients across various industries.</p>
+        <a href="#portfolio" class="btn">View My Work</a>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="container" id="portfolio">
+        <div class="section-title animate-in">
+            <h2>My Portfolio</h2>
+            <p>A curated selection of my finest projects, crafted with precision and passion.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons animate-in">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="client">Client Work</button>
+            <button class="filter-btn" data-filter="product">Products</button>
+            <button class="filter-btn" data-filter="web">Web Design</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+            <div class="portfolio-item animate-in" data-category="client web"
+                data-details="A complete redesign of a corporate website, focusing on user experience and modern aesthetics.">
+                <img src="media/house-card-3.jpg" alt="Website Design"
+                    class="portfolio-img" loading="lazy">
+                <div class="portfolio-content">
+                    <h3>Corporate Website Redesign</h3>
+                    <p>Complete redesign with improved UX and modern aesthetics.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Web Design</span>
+                        <span class="tag">Client</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item animate-in" data-category="product"
+                data-details="A mobile application designed to track workouts, nutrition, and health metrics with a sleek interface.">
+                <img src="media/house-card-3.jpg" alt="Mobile App" class="portfolio-img"
+                    loading="lazy">
+                <div class="portfolio-content">
+                    <h3>Fitness Tracking App</h3>
+                    <p>Track workouts, nutrition, and health metrics.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Product</span>
+                        <span class="tag">Mobile</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item animate-in" data-category="client"
+                data-details="A comprehensive branding package including logo design, color schemes, and brand guidelines for a premium client.">
+                <img src="media/house-card-3.jpg" alt="Branding Project"
+                    class="portfolio-img" loading="lazy">
+                <div class="portfolio-content">
+                    <h3>Brand Identity Package</h3>
+                    <p>Logo, colors, and brand guidelines.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Branding</span>
+                        <span class="tag">Client</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item animate-in" data-category="web product"
+                data-details="A custom-built e-commerce platform with seamless payment integration and inventory management.">
+                <img src="media/house-card-3.jpg" alt="E-commerce Site"
+                    class="portfolio-img" loading="lazy">
+                <div class="portfolio-content">
+                    <h3>E-commerce Platform</h3>
+                    <p>Online store with payment and inventory systems.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Web Design</span>
+                        <span class="tag">Product</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item animate-in" data-category="client"
+                data-details="A multi-channel digital marketing campaign integrating social media and email for maximum reach.">
+                <img src="media/house-card-3.jpg" alt="Marketing Campaign"
+                    class="portfolio-img" loading="lazy">
+                <div class="portfolio-content">
+                    <h3>Digital Marketing Campaign</h3>
+                    <p>Multi-channel campaign with social and email.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Marketing</span>
+                        <span class="tag">Client</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item animate-in" data-category="product web"
+                data-details="An interactive analytics dashboard with real-time data visualization and reporting features.">
+                <img src="media/house-card-3.jpg" alt="Dashboard UI"
+                    class="portfolio-img" loading="lazy">
+                <div class="portfolio-content">
+                    <h3>Analytics Dashboard</h3>
+                    <p>Real-time data visualization and reporting.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Web Design</span>
+                        <span class="tag">Product</span>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container" id="contact">
+        <div class="section-title animate-in">
+            <h2>Get In Touch</h2>
+            <p>Interested in collaborating? Let's discuss your next project.</p>
+        </div>
+        <form class="contact-form animate-in" aria-label="Contact form">
+            <input type="text" placeholder="Your Name" required aria-label="Name">
+            <input type="email" placeholder="Your Email" required aria-label="Email">
+            <textarea placeholder="Your Message" required aria-label="Message"></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Sticky Contact Button -->
+    <a href="#contact" class="sticky-contact">Contact Me</a>
+
+    <!-- Portfolio Modal -->
+    <div class="modal" id="portfolio-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+            <img class="modal-img" src="" alt="">
+            <div class="modal-body">
+                <h3></h3>
+                <p></p>
+                <div class="modal-tags"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <p>© <span id="year"></span> Professional Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.preloader').classList.add('hidden');
+            }, 500);
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Typed.js for Hero Text
+        new Typed('#typed-text',{
+            strings: ['Professional Portfolio', 'Crafted Excellence', 'Timeless Designs'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true,
+            cursorChar: '|',
+            startDelay: 800 
+        });
+
+        // Dark Mode Toggle
+        // const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        // darkModeToggle.addEventListener('click', () => {
+        //     document.body.classList.toggle('dark-mode');
+        //     const icon = darkModeToggle.querySelector('i');
+        //     icon.classList.toggle('fa-moon');
+        //     icon.classList.toggle('fa-sun');
+        // });
+
+        // Hamburger Menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.querySelector('i').classList.toggle('fa-bars');
+            hamburger.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Sticky Header and Back to Top
+        const header = document.querySelector('header');
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+            backToTop.classList.toggle('visible', window.scrollY > 300);
+        });
+
+        // Back to Top Functionality
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Filter Portfolio Items
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filterValue = button.getAttribute('data-filter');
+                portfolioItems.forEach(item => {
+                    item.classList.remove('visible');
+                    setTimeout(() => {
+                        if (filterValue === 'all' || item.getAttribute('data-category').split(' ').includes(filterValue)) {
+                            item.style.display = 'block';
+                            item.classList.add('visible');
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }, 100);
+                });
+            });
+        });
+
+        // Portfolio Modal
+        const modal = document.getElementById('portfolio-modal');
+        const modalImg = modal.querySelector('.modal-img');
+        const modalTitle = modal.querySelector('.modal-body h3');
+        const modalDesc = modal.querySelector('.modal-body p');
+        const modalTags = modal.querySelector('.modal-tags');
+        const modalClose = modal.querySelector('.modal-close');
+
+        portfolioItems.forEach(item => {
+            item.addEventListener('click', () => {
+                modalImg.src = item.querySelector('.portfolio-img').src;
+                modalImg.alt = item.querySelector('.portfolio-img').alt;
+                modalTitle.textContent = item.querySelector('h3').textContent;
+                modalDesc.textContent = item.getAttribute('data-details');
+                modalTags.innerHTML = item.querySelector('.portfolio-tags').innerHTML;
+                modal.style.display = 'flex';
+            });
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+                navLinks.classList.remove('active');
+                hamburger.querySelector('i').classList.add('fa-bars');
+                hamburger.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        // Intersection Observer for Animations
+        const animateElements = document.querySelectorAll('.animate-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        animateElements.forEach(element => observer.observe(element));
+
+        // Form Submission (Demo)
+        const contactForm = document.querySelector('.contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Form submitted! (Demo only)');
+            contactForm.reset();
+        });
+    </script>
+</body>
+
+</html>
