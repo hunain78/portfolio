@@ -73,7 +73,9 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Header Styles */
@@ -188,7 +190,7 @@
             background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             overflow: hidden;
         }
-        
+
 
         #hero-canvas {
             position: absolute;
@@ -315,7 +317,8 @@
             transition: var(--transition);
             cursor: pointer;
             transform-style: preserve-3d;
-            height: 450px; /* Fixed height for uniformity */
+            height: 450px;
+            /* Fixed height for uniformity */
             display: flex;
             flex-direction: column;
         }
@@ -368,18 +371,21 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            height: 50px; /* Fixed height for tags */
+            height: 50px;
+            /* Fixed height for tags */
             overflow: hidden;
         }
 
         .tag {
             background: #e0e7ff;
             color: var(--primary-color);
-            padding: 0.4rem 1rem;
+            padding: 0.8rem 1rem;
             border-radius: 50px;
             font-size: clamp(0.75rem, 2vw, 0.85rem);
             font-weight: 600;
             transition: var(--transition);
+            text-align: center;
+            align-self: center;
         }
 
         .tag:hover {
@@ -474,8 +480,15 @@
         }
 
         @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         /* Button Styles */
@@ -644,8 +657,15 @@
 
         /* Animations */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .animate-in {
@@ -686,11 +706,11 @@
                 max-width: 90%;
             }
 
-            .hero p{
+            .hero p {
                 margin-left: 4rem;
             }
 
-            .hero .btn{
+            .hero .btn {
                 margin-right: 3rem;
             }
         }
@@ -811,7 +831,6 @@
             .hero .btn {
                 padding: clamp(0.3rem, 0.8vw, 0.4rem) clamp(0.7rem, 1.8vw, 1rem);
                 font-size: clamp(0.65rem, 1.5vw, 0.75rem);
-               
             }
 
             .section-title h2 {
@@ -881,7 +900,7 @@
         }
 
         @media (max-width:625px) {
-            .hero p{
+            .hero p {
                 margin-right: 5rem;
             }
         }
@@ -906,8 +925,13 @@
             .hero h1 {
                 font-size: clamp(3rem, 6vw, 4rem);
             }
+
             .hero p {
                 margin-left: 7rem;
+            }
+
+            .hero .btn {
+                margin-right: 3rem;
             }
         }
 
