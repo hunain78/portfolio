@@ -935,6 +935,12 @@
             }
         }
 
+      @media screen and (max-width: 1370px) {
+            .hero p {
+                margin-left: 5rem;
+            }
+        }
+
         /* Smooth scroll behavior */
         html {
             scroll-behavior: smooth;
