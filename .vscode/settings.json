@@ -6,5 +6,6 @@
         "scminput": false,
         "javascript": false,
         "html": true
-    }
+    },
+    "liveServer.settings.port": 5501
 }
