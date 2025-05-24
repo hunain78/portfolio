@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Preloader -->
     <div class="preloader"></div>
@@ -63,7 +67,7 @@
                 data-details="A complete redesign of a corporate website, focusing on user experience and modern aesthetics.">
                 <picture>
                     <source srcset="media/photo-1.jpeg" type="image/jpeg">
-                    <img src="media/photo-1.jpeg" alt="Website Design" class="portfolio-img" >
+                    <img src="media/photo-1.jpeg" alt="Website Design" class="portfolio-img">
                 </picture>
                 <div class="portfolio-content">
                     <h3>Corporate Website Redesign</h3>
@@ -78,7 +82,7 @@
                 data-details="A mobile application designed to track workouts, nutrition, and health metrics with a sleek interface.">
                 <picture>
                     <source srcset="media/photo-2.jpeg" type="image/jpeg">
-                    <img src="media/photo-2.jpeg" alt="Mobile App" class="portfolio-img" >
+                    <img src="media/photo-2.jpeg" alt="Mobile App" class="portfolio-img">
                 </picture>
                 <div class="portfolio-content">
                     <h3>Fitness Tracking App</h3>
@@ -93,7 +97,7 @@
                 data-details="A comprehensive branding package including logo design, color schemes, and brand guidelines for a premium client.">
                 <picture>
                     <source srcset="media/photo-3.jpeg" type="image/jpeg">
-                    <img src="media/photo-3.jpeg" alt="Branding Project" class="portfolio-img" >
+                    <img src="media/photo-3.jpeg" alt="Branding Project" class="portfolio-img">
                 </picture>
                 <div class="portfolio-content">
                     <h3>Brand Identity Package</h3>
@@ -108,7 +112,7 @@
                 data-details="A custom-built e-commerce platform with seamless payment integration and inventory management.">
                 <picture>
                     <source srcset="media/photo-1.jpeg" type="iimage/jpeg">
-                    <img src="media/photo-1.jpeg" alt="E-commerce Site" class="portfolio-img" >
+                    <img src="media/photo-1.jpeg" alt="E-commerce Site" class="portfolio-img">
                 </picture>
                 <div class="portfolio-content">
                     <h3>E-commerce Platform</h3>
@@ -123,7 +127,7 @@
                 data-details="A multi-channel digital marketing campaign integrating social media and email for maximum reach.">
                 <picture>
                     <source srcset="media/photo-2.jpeg" type="image/jpeg">
-                    <img src="media/photo-2.jpeg" alt="Marketing Campaign" class="portfolio-img" >
+                    <img src="media/photo-2.jpeg" alt="Marketing Campaign" class="portfolio-img">
                 </picture>
                 <div class="portfolio-content">
                     <h3>Digital Marketing Campaign</h3>
@@ -138,7 +142,7 @@
                 data-details="An interactive analytics dashboard with real-time data visualization and reporting features.">
                 <picture>
                     <source srcset="media/photo-3.jpeg" type="image/jpeg">
-                    <img src="media/photo-3.jpeg" alt="Dashboard UI" class="portfolio-img" >
+                    <img src="media/photo-3.jpeg" alt="Dashboard UI" class="portfolio-img">
                 </picture>
                 <div class="portfolio-content">
                     <h3>Analytics Dashboard</h3>
@@ -186,6 +190,11 @@
     <button class="back-to-top" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
+
+    <!-- Progress Bar HTML -->
+    <div class="progress-container">
+        <div class="progress-bar" id="scrollProgress"></div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -243,6 +252,14 @@
         // Back to Top Functionality
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Progress Bar JavaScript
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercentage + '%';
         });
 
         // Filter Portfolio Items
@@ -442,4 +459,5 @@
         });
     </script>
 </body>
+
 </html>
