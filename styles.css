@@ -532,6 +532,110 @@
             box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
         }
 
+        /*My skills section*/
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: clamp(1rem, 4vw, 2rem);
+            margin-bottom: 2rem;
+        }
+
+        .skill-item {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: clamp(1rem, 3vw, 1.5rem);
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+        }
+
+        .skill-item:hover h3,
+        .skill-item:hover p {
+            color: #fff;
+        }
+
+        .skill-item i {
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .skill-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 4vw, 1.6rem);
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* .fa-css3-alt:hover{
+            color: white;
+        } */
+
+        .skill-item p {
+            color: var(--light-text);
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+        }
+
+        /* Dark Mode Adjustments for Skills */
+        body.dark-mode .skill-item {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .skill-item:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Responsive Design for Skills */
+        @media (max-width: 1024px) {
+            .skills-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: clamp(0.8rem, 3vw, 1.5rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .skill-item {
+                padding: 1rem;
+            }
+
+            .skill-item h3 {
+                font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+            }
+
+            .skill-item p {
+                font-size: clamp(0.75rem, 2vw, 0.85rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skill-item h3 {
+                font-size: clamp(1.1rem, 3vw, 1.2rem);
+            }
+
+            .skill-item p {
+                font-size: clamp(0.7rem, 1.8vw, 0.8rem);
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .skills-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
         /* Contact Section */
         .contact-form {
             max-width: 600px;
